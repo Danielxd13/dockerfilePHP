@@ -1,6 +1,6 @@
 #partiendo de una imagen de php
-from php:latest
+from php:7.4-cli
 #copiar proyecto php en la carpeta de servicios html
-COPY documento.php /var/www/html/
+ADD documento.php /var/www/html/index.php
 #ejecutamos el proyecto -S modo silencio -t directorio q se ejecutara el php
-CMD ["php", "-S ","0.0.0.0:0000", "-t", "/var/www/html/"] 
+CMD ["php", "/var/www/html/index.php"] 
